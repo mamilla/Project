@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<form enctype="multipart/form-data" method="post" action="">
+		{% csrf_token %}
+		{{ form.as_p }}
+		
+		<input type="submit" name="" value="Submit"/>
+	</form>
+	<hr>
+	{% if T %}
+	<h1>The Following word occured {{ num }} times </h1>
+	{% for item in d1 %}
+		{{ item }}
+	{% endfor %}
+	{% endif %}
+</body>
+</html>
